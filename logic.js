@@ -1,4 +1,3 @@
-var keys = [...document.getElementsByTagName('form')[0].getElementsByTagName('input')];//make [0] more defined
 
 function addListenerToKeys(key) {
     switch (key.name) {
@@ -49,4 +48,7 @@ function addListenerToKeys(key) {
     }
 }
 
-keys.forEach(addListenerToKeys);
+window.onload = function() {
+    let keys = [...document.getElementsByTagName('form')[0].getElementsByTagName('input')];//make [0] more defined
+    keys.forEach(addListenerToKeys);
+}
